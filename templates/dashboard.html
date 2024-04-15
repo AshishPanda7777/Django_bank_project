@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Account Dashboard</h2>
+    <p>Balance: ${{ balance }}</p>
+    <h3>Options:</h3>
+    <ul>
+        <li><a href="{% url 'withdraw' %}">Withdraw Money</a></li>
+        <li><a href="{% url 'deposit' %}">Deposit Money</a></li>
+        <li><a href="{% url 'change_pin' %}">Change PIN</a></li>
+    </ul>
+</body>
+</html>
